@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Percentage Colculater</title>
+        <style>
+            body{
+                background-color: rgb(26, 6, 3);
+            }
+            #sahzeb{
+                margin-top: 20%;
+                margin-left: 40%;
+            }
+            p{
+                color: rgb(17, 228, 27);
+                font-size:x-large;
+            }
+            button{
+                background-color: blue;
+                font-size: x-large;
+            }
+            input{
+                background-color: rgb(137, 209, 205);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sahzeb">
+            <p>Enter Total Amount</p>
+            <div>
+                 <input type="number" name ="number" required id="total" >
+            </div>
+            <p>Enter Percentage discount</p>
+            <div>
+                 <input type="number"  required name="percent" id="percent" required>
+            </div><br>
+            <div>
+                <button type="submit" value="submit" id="done">Submit</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("done").onclick=function(){
+                var total=document.getElementById("total").value;
+                var percent=document.getElementById("percent").value;
+                var subtotal=" ";
+                subtotal=(total*percent)/100;
+                var sahez=total-subtotal;
+                if(sahez!=0){
+                alert("Total " + sahez);
+                }
+                else{
+                    alert("Error");
+                }
+
+
+            }
+        </script>
+    </body>
+</html>
